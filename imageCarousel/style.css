@@ -1,0 +1,103 @@
+body{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #333;
+	color: white;
+	line-height: 1.6;
+	font-size: 16px;
+}
+.slider{
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+.slide{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;/*initial opacity is 0. Whichever becomes current will have opacity of 1.*/
+	transition: opacity 0.4s ease-in-out;
+}
+.slide.current{
+	opacity: 1;
+}
+.slide .content{
+	position: absolute;
+	bottom: 70px;
+	left: -600px;
+	width: 400px;
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #333;
+	padding: 15px;
+}
+.slide.current .content{
+	opacity: 1;
+	transform: translateX(600px);
+	transition: all 0.7s ease-in-out 0.3s;/*the 0.3s is the delay of the transition coz we want it to appear after the image*/
+}
+button#next{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+}
+button#prev{
+	position: absolute;
+	top: 50%;
+	left: 20px;
+}
+.buttons button{
+	background-color: transparent;
+	border: none;
+	color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+	font-size: 1.6rem;
+	outline: none;
+	border-radius: 50%;
+}
+.buttons button:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+	color: #333;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
+.slide:first-child{
+	background: url("resources/1-taj.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(2){
+	background: url("resources/2-colosseum.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(3){
+	background: url("resources/3-greatwall.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(4){
+	background: url("resources/4-petra.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(5){
+	background: url("resources/5-christ.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(6){
+	background: url("resources/6-machu.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(7){
+	background: url("resources/7-chichen.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(8){
+	background: url("resources/8-pyramid.jpg") no-repeat center top/cover;
+}
