@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Very Simple Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Very Simple Calculator</h2>
+		<form>
+			<input type="number" id="n1" name="firstNumber" placeholder="Enter first number" required>
+			<br>
+			<p>Operation:&nbsp;
+			<select id="opr">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="x">x</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select></p>
+			<input type="number" id="n2" name="secondNumber" placeholder="Enter second number" required>
+			<br>
+			<br>
+			<input type="button" class="button" value="Calculate" name="=" onclick="calc()">
+			<br>
+			<br>
+			<input type="text" id="result" placeholder="Result" name="result">
+			<br>
+			<br>
+			<input type="reset" class="button" value="Reset" name="reset" onclick="reset()">
+		</form>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
