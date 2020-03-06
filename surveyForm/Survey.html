@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="author" content="Zion Sandeep">
+<link rel="stylesheet" type="text/css" href="survey style.css">
+<title>Risk Management survey</title>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<h1 id="title">Employee Feedback on Risk Management</h1>
+		<p id="description">Kindly request your feedback on risk management practices being followed by the company</p>
+	</header>
+	<form id="survey-form">
+		<div class="field-box">
+			<label id="name-label" for="name">Name:</label><br>
+			<input type="text" id="name" class="input-box" name="name" placeholder="Enter your name here" required><br>
+		</div>
+		<div class="field-box">
+			<label id="email-label" for="email">Email:</label><br>
+			<input type="email" id="email" class="input-box" name="email" placeholder="Enter your email here" required><br>
+		</div>
+		<div class="field-box">
+			<label id="number-label" for="number">Age (optional):</label><br>
+			<input type="number" id="number" class="input-box" name="age" min="15" max="90" placeholder="Enter your age"><br>
+		</div>
+		<div class="field-box">
+			Experience:<br>
+			<label><input type="radio" name="experience" value="0-2" required>0-2 years</label><br>
+			<label><input type="radio" name="experience" value="3-5" required>3-5 years</label><br>
+			<label><input type="radio" name="experience" value="6-10" required>6-10 years</label><br>
+			<label><input type="radio" name="experience" value=">10" required>Greater than 10 years</label><br>
+		</div>
+		<div class="field-box">
+			Designation:<br>
+			<select name="designation" id="dropdown" class="input-box" required>
+				<option value disabled selected>Please select your designation</option>
+				<option value="Engineer">Engineer</option>
+				<option value="SeniorEngineer">Senior Engineer</option>
+				<option value="AsstManager">Assistant Manager</option>
+				<option value="Manager">Manager</option>
+				<option value="SeniorManagerabove">Senior Manager or higher</option>
+				<option value="Other">Other</option>
+			</select><br>
+		</div>
+		<div class="field-box">
+			What do you understand by the term Risk?:<br>
+			<select name="riskMeaning" class="input-box" required>
+				<option value disabled selected>Select the relevant term</option>
+				<option value="Threat">Threat</option>
+				<option value="Oppurtunity">Oppurtunity</option>
+				<option value="Both">Both</option>
+				<option value="Neither">Neither</option>
+				<option value="Not sure">Not sure</option>
+			</select><br>
+		</div>
+		<div class="field-box">
+			Have you read any courses regarding Risk Management?<br><br>
+			<label><input type="radio" name="riskCourse" value="yes" required>Yes</label><br>
+			<label><input type="radio" name="riskCourse" value="no" required>No</label><br>
+			<label><input type="radio" name="riskCourse" value="maybe" required>Maybe</label><br>
+		</div>
+		<div class="field-box">
+			Does your organisation provide any training in Risk Management?<br><br>
+			<label><input type="radio" name="riskTraining" value="yes" required>Yes</label><br>
+			<label><input type="radio" name="riskTraining" value="no" required>No</label><br>
+			<label><input type="radio" name="riskTraining" value="not sure" required>Not Sure</label><br>
+		</div>
+		<div class="field-box">
+			Do you feel there are adequate risk management processes in your organisation's business and projects?<br><br>
+			<label><input type="radio" name="adequacy" value="yes" required>Yes</label><br>
+			<label><input type="radio" name="adequacy" value="no" required>No</label><br>
+			<label><input type="radio" name="adequacy" value="not sure" required>Not Sure</label><br>
+		</div>
+		<div class="field-box">
+			If not, what do you think are the reasons for inadequate risk management?<br><br>
+			<label><input type="checkbox" name="inadequacyReason" value="lackOfCompetance">Lack of Competance</label><br>
+			<label><input type="checkbox" name="inadequacyReason" value="lackOfInfo">Lack of Information</label><br>
+			<label><input type="checkbox" name="inadequacyReason" value="lackOfTime">Lack of Time</label><br>
+			<label><input type="checkbox" name="inadequacyReason" value="lackOfResources">Lack of Resources</label><br>
+			<label><input type="checkbox" name="inadequacyReason" value="noBenefit">No tangible benefit</label><br>
+			<label><input type="checkbox" name="inadequacyReason" value="other">Other</label><br>
+		</div>
+		<div class="field-box">
+			State your agreement with the following statement:
+			'The Senior Management is active and possesses an appropriate degree of management and technical expertise, coupled with the mind-set necessary to perform its oversight responsibilities'<br><br>
+			<label><input type="radio" name="agreement" value="stronglyDisagree" required>Strongly Disagree</label><br>
+			<label><input type="radio" name="agreement" value="disagree" required>Disagree</label><br>
+			<label><input type="radio" name="agreement" value="neutral" required>Neutral</label><br>
+			<label><input type="radio" name="agreement" value="agree" required>Agree</label><br>
+			<label><input type="radio" name="agreement" value="stronglyAgree" required>Strongly Agree</label><br>
+		</div>
+		<div class="field-box">
+			Your suggestions, if any:<br>
+			<textarea rows=8 cols=60 placeholder="Enter your comments here..." class="input-box"></textarea><br>
+			<input type="submit" id="submit">
+		</div>
+		</div>
+</body>
